@@ -32,14 +32,11 @@ alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css
 4. If TODO has been dode, underline the header  in the title sidenav listing.
 
 ## GUI (my proposition) 
-This is where I'm going to.<br><br>
+This is where I'm going to. In the video below.<br><br>
 **Question:**<br>
 Does this match your requirements?<br>
-![Concept](https://media.giphy.com/media/FJDHBAMGQ4YS3Xk4fT/source.mov)<br>
+[![Concept](https://media.giphy.com/media/FJDHBAMGQ4YS3Xk4fT/giphy.gif)](https://youtu.be/m2HVsewT5fg)
 Note: I don't know if can I do it.<br>
-![Concept](https://media.giphy.com/media/FJDHBAMGQ4YS3Xk4fT/giphy.mp4)
-YHouyube<br>
-![Concept](https://youtu.be/m2HVsewT5fg)
 
 **Play with it!**<br>
 Here is the [interactive presentation (Google Slide)](https://docs.google.com/presentation/d/1_viCUeWmkG_seoqqHQUTjdlEZX5zTAcnJlipYdul-68/edit?usp=sharing)
