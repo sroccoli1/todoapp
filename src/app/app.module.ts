@@ -21,7 +21,6 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { DialogComponent } from './dialog/dialog.component';
 import { CreatetododialogComponent } from './createtododialog/createtododialog.component';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { CreatetododialogComponent } from './createtododialog/createtododialog.c
     HeaderComponent,
     AllListSidenavComponent,
     MainContentComponent,
-    DialogComponent,
     CreatetododialogComponent,
   ],
   imports: [

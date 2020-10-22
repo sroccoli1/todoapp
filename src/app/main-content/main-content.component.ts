@@ -43,7 +43,8 @@ export class MainContentComponent implements OnInit {
   //     return name.value | description.value !== "" ? {creationInfoMin : true} : null;
   // };
 
-  close(){
+  /** Delete the todo */
+  delete(){
     console.log("closing");
   }
 
