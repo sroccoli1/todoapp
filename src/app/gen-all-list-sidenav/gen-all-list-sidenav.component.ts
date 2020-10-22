@@ -18,4 +18,9 @@ export class GenAllListSidenavComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  /** Opens a dialog */
+  onClickOpenModal(){
+
+  }
+
 }
