@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DialogComponent } from './dialog/dialog.component';
+import { CreatetododialogComponent } from './createtododialog/createtododialog.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DialogComponent } from './dialog/dialog.component';
     AllListSidenavComponent,
     MainContentComponent,
     DialogComponent,
+    CreatetododialogComponent,
   ],
   imports: [
     BrowserModule,

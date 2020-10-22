@@ -15,20 +15,20 @@ export class DialogComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   /** Generate create form dialog and controls. */ 
-  // createtodoForm = this.fb.group({
+  // todoForm = this.fb.group({
   //   todoName : [''],
   //   todoDescription: ['']
   // },{ validators: this.createTodoValidator });
 
-  createtodoForm = this.fb.group({
+  todoForm = this.fb.group({
     todoName : [''],
     todoDescription: ['']
   });
 
   /** Returns this.projectForm in the console (when you press on submit button) */ 
   onSubmit(){
-    console.log(this.createtodoForm);
-    // console.log(this.createtodoForm.get('todoDescription'));
+    console.log(this.todoForm);
+    // console.log(this.todoForm.get('todoDescription'));
   }
 
   /** A custom validator which does not accept a certain expression. 
