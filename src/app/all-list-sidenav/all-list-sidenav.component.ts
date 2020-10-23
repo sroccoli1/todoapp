@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../todo.model';
 import { ManagetodoService } from '../managetodo/managetodo.service';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogexampleComponent } from '../dialogexample/dialogexample.component';
+
 
 @Component({
   selector: 'app-all-list-sidenav',
@@ -10,20 +13,24 @@ import { ManagetodoService } from '../managetodo/managetodo.service';
 
 export class AllListSidenavComponent implements OnInit {
   /** Injects the todo service. */
-  constructor(private manageTodoService: ManagetodoService) { }
+  constructor(
+    public dialog: MatDialog,
+    private manageTodoService: ManagetodoService) { }
 
   ngOnInit(): void {
   }
 
   /** Prompts a dialog for creating a new todo. 
    * The dialog uses the todo service to add the todo to the list. */
-  addTodo(){
-    //Prompts a dialog
-    
-    
-    // TBD
+  openDialog():void {
+    // Setting dialog config options
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false; 
+    dialogConfig.autoFocus = true;
 
+    const dialogRef = this.dialog.open(DialogexampleComponent, dialogConfig);
 
-    console.log('New todo created!');
+    // Prints in the console when the dialog is closed
+    // TODO
   }
 }
