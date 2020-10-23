@@ -25,7 +25,7 @@ import { CreatetododialogComponent } from './createtododialog/createtododialog.c
 import { DialogexampleComponent } from './dialogexample/dialogexample.component';
 import { ManagetodoService } from './managetodo/managetodo.service';
 import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_DATA} from '@angular/material/dialog';
-import '@angular/compiler';
+// import '@angular/compiler';
 
 @NgModule({
   declarations: [
@@ -51,6 +51,7 @@ import '@angular/compiler';
     MatInputModule,
     FlexLayoutModule,
     MatCardModule,
+    MatButton,
     MatDialog, 
     MatDialogModule,
     MatDialogRef,
