@@ -1,24 +1,26 @@
 <form [formGroup]="createtodoForm" fxLayout="column">
-    <mat-form-field appearance="fill">
-        <input 
-            formControlName="todoName" 
-            matNativeControl 
-            placeholder="Title">
-    </mat-form-field>
-    <br>
-    <mat-form-field appearance="fill">
-        <textarea 
-            formControlName="todoDescription" 
-            matNativeControl 
-            placeholder="Todos...">
-        </textarea>
-    </mat-form-field>
+    <div mat-dialog-content>
+        <mat-form-field appearance="fill">
+            <input 
+                formControlName="todoName" 
+                matNativeControl 
+                placeholder="Title">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <textarea 
+                formControlName="todoDescription" 
+                matNativeControl 
+                placeholder="Todos...">
+            </textarea>
+        </mat-form-field>
+    </div>
 </form>
-<div>
-    <button class="mat-button mat-warn"
+<div mat-dialog-actions>
+    <button mat-button class="mat-button mat-warn"
         (click)="delete()">Delete</button>
-    <button class="mat-raised-button">Edit</button>
-    <button class="mat-raised-button mat-primary"
+    <button mat-button class="mat-raised-button">Edit</button>
+    <button mat-button class="mat-raised-button mat-primary"
         (click)="addTodo()">Save</button>
 </div>
 <div class="row">

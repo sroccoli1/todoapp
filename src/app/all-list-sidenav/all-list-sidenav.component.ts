@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from '../todo.model';
-import { ManagetodoService } from '../managetodo/managetodo.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DialogexampleComponent } from '../dialogexample/dialogexample.component';
 
@@ -13,9 +11,7 @@ import { DialogexampleComponent } from '../dialogexample/dialogexample.component
 
 export class AllListSidenavComponent implements OnInit {
   /** Injects the todo service. */
-  constructor(
-    public dialog: MatDialog,
-    private manageTodoService: ManagetodoService) { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }

@@ -23,6 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CreatetododialogComponent } from './createtododialog/createtododialog.component';
 import { DialogexampleComponent } from './dialogexample/dialogexample.component';
+import { ManagetodoService } from './managetodo/managetodo.service';
+import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_DATA} from '@angular/material/dialog';
+import '@angular/compiler';
 
 @NgModule({
   declarations: [
@@ -48,9 +51,23 @@ import { DialogexampleComponent } from './dialogexample/dialogexample.component'
     MatInputModule,
     FlexLayoutModule,
     MatCardModule,
-    ReactiveFormsModule
+    MatDialog, 
+    MatDialogModule,
+    MatDialogRef,
+    MatDialogConfig,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MatDialogRef,
+      useValue:{}
+    },
+    {
+      provide: MAT_DIALOG_DATA,
+      useValue:{}
+    },
+    ManagetodoService
+  ],
   bootstrap: [AppComponent],
   entryComponents: [DialogexampleComponent]
 })
