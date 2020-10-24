@@ -19,14 +19,14 @@ export class AllListSidenavComponent implements OnInit {
   /** Prompts a dialog for creating a new todo. 
    * The dialog uses the todo service to add the todo to the list. */
   openDialog():void {
-    // Setting dialog config options
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = false; 
-    dialogConfig.autoFocus = true;
+    // // Setting dialog config options
+    // const dialogConfig = new MatDialogConfig();
+    // dialogConfig.disableClose = false; 
+    // dialogConfig.autoFocus = true;
 
-    const dialogRef = this.dialog.open(DialogexampleComponent, dialogConfig);
+    // const dialogRef = this.dialog.open(DialogexampleComponent, dialogConfig);
 
-    // Prints in the console when the dialog is closed
-    // TODO
+    // // Prints in the console when the dialog is closed
+    // // TODO
   }
 }

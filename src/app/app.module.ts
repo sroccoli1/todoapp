@@ -18,13 +18,13 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule} from '@angular/material/input';
 import { MainContentComponent } from './main-content/main-content.component';
 import { MatCardModule } from '@angular/material/card';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CreatetododialogComponent } from './createtododialog/createtododialog.component';
 import { DialogexampleComponent } from './dialogexample/dialogexample.component';
 import { ManagetodoService } from './managetodo/managetodo.service';
-import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 // import '@angular/compiler';
 
 @NgModule({
@@ -40,8 +40,12 @@ import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule,
+    
     LayoutModule,
+    FlexLayoutModule,
+    
+    FormsModule,
+    MatSliderModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -49,13 +53,13 @@ import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    FlexLayoutModule,
     MatCardModule,
     MatButton,
     MatDialog, 
     MatDialogModule,
     MatDialogRef,
     MatDialogConfig,
+
     ReactiveFormsModule,
   ],
   providers: [
@@ -64,8 +68,8 @@ import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_
       useValue:{}
     },
     {
-      provide: MAT_DIALOG_DATA,
-      useValue:{}
+      provide: MAT_DIALOG_DEFAULT_OPTIONS,
+      useValue:{appearance: 'fill'}
     },
     ManagetodoService
   ],
