@@ -1,4 +1,4 @@
-<form [formGroup]="createtodoForm" fxLayout="column">
+<!-- <form [formGroup]="createtodoForm" fxLayout="column">
     <div mat-dialog-content>
         <mat-form-field appearance="fill">
             <input 
@@ -25,5 +25,21 @@
 </div>
 <div class="row">
     Form value: {{ createtodoForm.value | json }}
-    <!-- {state: {name: 'New York', abbrev: 'NY'} } -->
-  </div>
+    {state: {name: 'New York', abbrev: 'NY'} }
+  </div> -->
+
+<div mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <input 
+            matNativeControl 
+            placeholder="Title">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <textarea 
+            matNativeControl 
+            placeholder="Todos...">
+        </textarea>
+    </mat-form-field>
+</div>
+

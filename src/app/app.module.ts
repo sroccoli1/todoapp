@@ -18,13 +18,13 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule} from '@angular/material/input';
 import { MainContentComponent } from './main-content/main-content.component';
 import { MatCardModule } from '@angular/material/card';
-import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CreatetododialogComponent } from './createtododialog/createtododialog.component';
 import { DialogexampleComponent } from './dialogexample/dialogexample.component';
 import { ManagetodoService } from './managetodo/managetodo.service';
-import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
+import { MatDialogModule, MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 // import '@angular/compiler';
 
 @NgModule({
@@ -33,7 +33,6 @@ import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_
     HeaderComponent,
     AllListSidenavComponent,
     MainContentComponent,
-    CreatetododialogComponent,
     DialogexampleComponent,
   ],
   imports: [
@@ -54,19 +53,11 @@ import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    MatButton,
-    MatDialog, 
     MatDialogModule,
-    MatDialogRef,
-    MatDialogConfig,
 
     ReactiveFormsModule,
   ],
   providers: [
-    {
-      provide: MatDialogRef,
-      useValue:{}
-    },
     {
       provide: MAT_DIALOG_DEFAULT_OPTIONS,
       useValue:{appearance: 'fill'}
@@ -74,6 +65,8 @@ import { MatDialog, MatDialogModule, MatDialogRef, MatDialogConfig , MAT_DIALOG_
     ManagetodoService
   ],
   bootstrap: [AppComponent],
-  entryComponents: [DialogexampleComponent]
+  entryComponents: [AllListSidenavComponent, DialogexampleComponent]
 })
 export class AppModule { }
+
+

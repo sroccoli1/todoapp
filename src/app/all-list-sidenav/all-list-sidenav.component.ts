@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig  } from '@angular/material/dialog';
 import { DialogexampleComponent } from '../dialogexample/dialogexample.component';
 
 
@@ -20,11 +20,12 @@ export class AllListSidenavComponent implements OnInit {
    * The dialog uses the todo service to add the todo to the list. */
   openDialog():void {
     // // Setting dialog config options
-    // const dialogConfig = new MatDialogConfig();
-    // dialogConfig.disableClose = false; 
-    // dialogConfig.autoFocus = true;
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true; 
+    dialogConfig.autoFocus = true;
 
-    // const dialogRef = this.dialog.open(DialogexampleComponent, dialogConfig);
+    const dialogRef = this.dialog.open(DialogexampleComponent, dialogConfig);
+    // const dialogRef = this.dialog.open(DialogexampleComponent);
 
     // // Prints in the console when the dialog is closed
     // // TODO
