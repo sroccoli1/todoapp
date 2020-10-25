@@ -65,7 +65,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     ManagetodoService
   ],
   bootstrap: [AppComponent],
-  entryComponents: [AllListSidenavComponent, DialogexampleComponent]
+  entryComponents: [DialogexampleComponent]
 })
 export class AppModule { }
 
