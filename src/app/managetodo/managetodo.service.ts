@@ -6,14 +6,23 @@ import { Todo } from '../todo.model';
 })
 export class ManagetodoService {
   /** A list of Todos */
-  todos: Todo[];
+  todos: Todo[]=[];
 
   constructor() { }
 
    /** Add a todo to this.todos - the todo-list. */
-   addTodo(newTodo:Todo){
+  // addTodo(newTodo:Todo){
+  //   this.todos.push(newTodo);
+  //   console.log('todo added');
+  //   console.table(this.todos);
+  // }
+
+  /** Add a todo to this.todos - the todo-list. */
+  addTodo(valueFromInput: { title: string, description: string}){
+    let newTodo = new Todo(valueFromInput.title, valueFromInput.description);
     this.todos.push(newTodo);
-    console.log('todo added');
+    // console.log('addTodo, from input :', valueFromInput);
+    console.table(this.todos);
   }
 
   /** @returns this.todos - the todo-list. */
