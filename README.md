@@ -43,7 +43,7 @@ Note: I don't know if can I do it, but I started! :-)<br><br>
 ## Current state
 
 **First sprint outcome**<br>
-[![Sprint 1 Outcome](https://media.giphy.com/media/FJDHBAMGQ4YS3Xk4fT/giphy.gif)](https://youtu.be/jcZ_ZL_JvzI)<br>
+[![Sprint 1 Outcome](https://media.giphy.com/media/8kC9Q4ZYd79RpHiejj/giphy.gif)](https://youtu.be/jcZ_ZL_JvzI)<br>
 
 ## Sprint log
 
