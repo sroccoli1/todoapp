@@ -34,9 +34,21 @@ alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css
 ## GUI (my proposition) 
 This is where I'm going to. See the video on Youtube (unlisted).<br><br>
 [![Concept](https://media.giphy.com/media/FJDHBAMGQ4YS3Xk4fT/giphy.gif)](https://youtu.be/m2HVsewT5fg)<br>
-Note: I don't know if can I do it.<br><br>
-**Question:**<br>
-Does this match your requirements?<br>
 
 **Play with it!**<br>
 Here is the [interactive presentation (Google Slide)](https://docs.google.com/presentation/d/1_viCUeWmkG_seoqqHQUTjdlEZX5zTAcnJlipYdul-68/edit?usp=sharing)
+
+Note: I don't know if can I do it, but I started! :-)<br><br>
+
+## Current state
+
+**First sprint outcome**<br>
+[![Sprint 1 Outcome](https://media.giphy.com/media/FJDHBAMGQ4YS3Xk4fT/giphy.gif)](https://youtu.be/jcZ_ZL_JvzI)<br>
+
+## Sprint log
+
+[Here it is](https://github.com/sroccoli1/todoapp/blob/main/devnotes.md) 
+
+## Errors and fixes log
+
+[My own record of errors and fixes.](https://github.com/sroccoli1/todoapp/blob/main/errors_and_fixes.md)

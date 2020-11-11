@@ -17,7 +17,8 @@ This sprint will use the basic features I learned throughout the Angular basics 
 
 ### Current and limitations : 
 
-- GIF / MP4 TODOAPPDEV-20201027
+- See the video on Youtube (unlisted).<br><br>
+[![Sprint 1 Outcome](https://media.giphy.com/media/8kC9Q4ZYd79RpHiejj/giphy.gif)](https://youtu.be/jcZ_ZL_JvzI)<br>
 - ManagetodoService does not save yet anything
 - Create-Todo Modal does not create anything yet 
 
