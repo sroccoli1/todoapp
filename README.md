@@ -33,7 +33,7 @@ alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css
 
 ## GUI (my proposition) 
 This is where I'm going to. See the video on Youtube (unlisted).<br><br>
-[![Concept](https://media.giphy.com/media/FJDHBAMGQ4YS3Xk4fT/giphy.gif)](https://youtu.be/m2HVsewT5fg)<br>
+[![Concept]()]()<br>
 
 **Play with it!**<br>
 Here is the [interactive presentation (Google Slide)](https://docs.google.com/presentation/d/1_viCUeWmkG_seoqqHQUTjdlEZX5zTAcnJlipYdul-68/edit?usp=sharing)
