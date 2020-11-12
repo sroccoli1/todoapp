@@ -16,15 +16,18 @@
     </mat-form-field>
 </form>
 <ng-template #readView>
-    <div>
-        <h2>{{todoDetails.title}}</h2>
-        <p>{{todoDetails.description}}</p>
-    </div> 
+    <header><h2>{{todoDetails.title}}</h2></header>
+    <section>{{todoDetails.description}}</section> 
 </ng-template>
 <div>
     <button class="mat-button mat-warn"
         (click)="delete()">Delete</button>
-    <button class="mat-raised-button" (click)="edit()">Edit</button>
+    <button *ngIf="!editView"
+        class="mat-raised-button" 
+        (click)="edit()">Edit</button>
+    <button *ngIf="editView" 
+        class="mat-raised-button"
+        (click)="onCancel()">Cancel</button>
     <button *ngIf="editView" 
         class="mat-raised-button mat-primary"
         (click)="onSubmit()">Save</button>
