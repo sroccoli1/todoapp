@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, AbstractControl,
+import { Component } from '@angular/core';
+import { 
   FormBuilder, 
-  ValidationErrors, ValidatorFn } from '@angular/forms';
-
+  ValidationErrors, 
+  ValidatorFn } from '@angular/forms';
 
 @Component({
   selector: 'app-main-content',
   templateUrl: './main-content.component.html',
   styleUrls: ['./main-content.component.css']
 })
-export class MainContentComponent implements OnInit {
-
-  ngOnInit(): void {
-  }
-
-  /** Inject a FormBuilder service. */  
+export class MainContentComponent{
   constructor(private fb: FormBuilder) { }
+  editView:Boolean = false;
+  todoDetails = [ {title:'Call Kari', description:'History: \n Subject:'}];
 
   /** Generate create form dialog and controls. */ 
   // todoForm = this.fb.group({
@@ -43,9 +40,12 @@ export class MainContentComponent implements OnInit {
   //     return name.value | description.value !== "" ? {creationInfoMin : true} : null;
   // };
 
+  edit(){
+    this.editView = true;
+  }
+
   /** Delete the todo */
   delete(){
     console.log("closing");
   }
-
 }

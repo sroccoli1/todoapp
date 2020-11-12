@@ -22,7 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DialogexampleComponent } from './dialogexample/dialogexample.component';
-import { ManagetodoService } from './managetodo/managetodo.service';
+import { ManagetodoService } from './shared/managetodo.service';
 import { MatDialogModule, MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 // import '@angular/compiler';
