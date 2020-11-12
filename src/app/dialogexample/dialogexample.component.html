@@ -1,53 +1,29 @@
-<!-- <form [formGroup]="createtodoForm" fxLayout="column">
-    <div mat-dialog-content>
+<form [formGroup]="createtodoForm">
+    <div mat-dialog-content class="mat-typography">
+        <div mat-dialog-actions>
+            <button mat-button mat-dialog-close 
+                class="mat-button mat-warn"
+                (click)="delete()">Delete</button>
+            <button mat-button [mat-dialog-close]="true" 
+                class="mat-raised-button mat-primary"
+                (click)="addTodo()">Save</button>
+        </div>
+        <h2>
         <mat-form-field appearance="fill">
             <input 
-                formControlName="todoName" 
+                formControlName="todoName"
                 matNativeControl 
-                placeholder="Title">
+                placeholder="Anna nimi">
         </mat-form-field>
+        </h2>
         <br>
         <mat-form-field appearance="fill">
             <textarea 
-                formControlName="todoDescription" 
+                formControlName="todoDescription"
+                matInput
                 matNativeControl 
-                placeholder="Todos...">
+                placeholder="Kirjoita Tehtävät">
             </textarea>
         </mat-form-field>
     </div>
 </form>
-<div mat-dialog-actions>
-    <button mat-button class="mat-button mat-warn"
-        (click)="delete()">Delete</button>
-    <button mat-button class="mat-raised-button">Edit</button>
-    <button mat-button class="mat-raised-button mat-primary"
-        (click)="addTodo()">Save</button>
-</div>
-<div class="row">
-    Form value: {{ createtodoForm.value | json }}
-    {state: {name: 'New York', abbrev: 'NY'} }
-  </div> -->
-
-<div mat-dialog-content class="mat-typography">
-    <div mat-dialog-actions>
-        <button mat-button mat-dialog-close class="mat-button mat-warn"
-            (click)="delete()">Delete</button>
-        <button mat-button [mat-dialog-close]="true" class="mat-raised-button mat-primary"
-            (click)="addTodo()">Save</button>
-    </div>
-    <h2>
-    <mat-form-field appearance="fill">
-        <input 
-            matNativeControl 
-            placeholder="Anna nimi">
-    </mat-form-field>
-    </h2>
-    <br>
-    <mat-form-field appearance="fill">
-        <textarea matInput
-            matNativeControl 
-            placeholder="Kirjoita Tehtävät">
-        </textarea>
-    </mat-form-field>
-</div>
-

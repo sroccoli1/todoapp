@@ -61,7 +61,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     {
       provide: MAT_DIALOG_DEFAULT_OPTIONS,
       useValue:{appearance: 'fill'}
-    },
+    }, 
     ManagetodoService
   ],
   bootstrap: [AppComponent],

@@ -6,7 +6,12 @@ import { Todo } from '../todo.model';
 })
 export class ManagetodoService {
   /** A list of Todos */
-  todos: Todo[]=[
+  //todos: Todo[]=[new Todo('Call Kari', 'History: \n Subject:')];    
+  todos = [
+    {title:'Call Kari', description:'History: \n Subject:'},
+    {title:'Find course', description:'Browse: OAMK Tek courses :'},
+    {title:'Check month strategy', description:'Evaluate 3 options'},
+  
   ];
 
   constructor() { }
@@ -22,13 +27,17 @@ export class ManagetodoService {
   addTodo(valueFromInput: { title: string, description: string}){
     // let newTodo = new Todo(valueFromInput.title, valueFromInput.description);
     // console.log('addTodo, from input :', newTodo);
-    this.todos.push(valueFromInput.title, valueFromInput.description);
+    this.todos.push(valueFromInput);
     console.table(this.todos);
   }
 
   /** @returns this.todos - the todo-list. */
   getTodos(){
     return this.todos;
+  }
+
+  toConsole(){
+    console.table(this.todos);
   }
 
   /** Clears this.todos - the todo-list and @returns an empty array of todos. */
