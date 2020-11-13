@@ -7,15 +7,15 @@ import { Todo } from './todo.model';
 export class ManagetodoService {
   /** A list of Todos. */    
   todos = [
-    {title:'Call Kari', description:'History: \n Subject:'},
-    {title:'Find course', description:'Browse: OAMK Tek courses :'},
-    {title:'Check month strategy', description:'Evaluate 3 options'},
+    {title:'Call Kari', description:'History: \n Subject:', completed:false},
+    {title:'Find course', description:'Browse: OAMK Tek courses :', completed:false},
+    {title:'Check month strategy', description:'Evaluate 3 options', completed:false},
   ];
 
   constructor() { }
 
   /** Add a todo to this.todos - the todo-list. */
-  addTodo(valueFromInput: { title: string, description: string}){
+  addTodo(valueFromInput: { title: string, description: string, completed:boolean}){
     // let newTodo = new Todo(valueFromInput.title, valueFromInput.description);
     // console.log('addTodo, from input :', newTodo);
     this.todos.push(valueFromInput);
@@ -38,7 +38,7 @@ export class ManagetodoService {
   }
 
   /** Delete this todo. */
-  delete(valueFromInput:{title:string, description:string}){
+  delete(valueFromInput:{title:string, description:string, completed:boolean}){
     this.todos.splice(this.todos.indexOf(valueFromInput));
   }
 }

@@ -24,8 +24,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DialogexampleComponent } from './dialogexample/dialogexample.component';
 import { ManagetodoService } from './shared/managetodo.service';
 import { MatDialogModule, MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-// import '@angular/compiler';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -54,8 +53,8 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     MatInputModule,
     MatCardModule,
     MatDialogModule,
-
-    ReactiveFormsModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

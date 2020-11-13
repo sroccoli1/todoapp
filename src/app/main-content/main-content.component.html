@@ -1,38 +1,73 @@
-<form *ngIf="editView; else readView" 
-    [formGroup]="todoForm" fxLayout="column">
-    <mat-form-field appearance="fill">
-        <input 
-            formControlName="todoName" 
-            matNativeControl 
-            placeholder="Title">
-    </mat-form-field>
+<form 
+    *ngIf="editView; else readView" 
+    [formGroup]="todoForm" 
+    fxLayout="column"
+    class="margin" >
+    <div fxLayout="row">
+        <mat-checkbox 
+            fxLayout="row" 
+            fxFlexAlign="center center">
+        </mat-checkbox>
+        <mat-form-field 
+            class="margin-right-left" 
+            fxFlexFill 
+            appearance="fill">
+            <input 
+                class="title"
+                type="text"
+                formControlName="todoName" 
+                matNativeControl 
+                placeholder="Title">
+        </mat-form-field>
+    </div>
     <br>
     <mat-form-field appearance="fill">
-        <textarea 
+        <textarea
+            class="text"
+            type="text"
             formControlName="todoDescription" 
             matNativeControl 
             placeholder="Todos...">
         </textarea>
     </mat-form-field>
-</form>
-<ng-template #readView>
-    <header><h2>{{todoDetails.title}}</h2></header>
-    <section>{{todoDetails.description}}</section> 
+</form><br>
+<ng-template 
+    class="margin" 
+    #readView>
+    <header 
+        fxLayout="row" 
+        class="title margin">
+        <mat-checkbox
+            fxFlexAlign="center center"
+            class="margin-right"
+            aria-labelledby="mark-as-completed">
+        </mat-checkbox>
+        {{todoDetails.title}}
+    </header>
+    <section class="text margin">
+        {{todoDetails.description}}
+    </section> 
 </ng-template>
-<div>
-    <button class="mat-button mat-warn"
-        (click)="delete()">Delete</button>
-    <button *ngIf="!editView"
+<section 
+    name="controls" 
+    class="margin" >
+    <button 
+        class="mat-raised-button mat-warn"
+        (click)="delete()">Delete
+    </button>
+    <button 
+        *ngIf="!editView"
         class="mat-raised-button" 
-        (click)="edit()">Edit</button>
-    <button *ngIf="editView" 
+        (click)="edit()">Edit
+    </button>
+    <button 
+        *ngIf="editView" 
         class="mat-raised-button"
-        (click)="onCancel()">Cancel</button>
-    <button *ngIf="editView" 
+        (click)="onCancel()">Cancel
+    </button>
+    <button 
+        *ngIf="editView" 
         class="mat-raised-button mat-primary"
-        (click)="onSubmit()">Save</button>
-</div>
-<div class="row">
-    Form value: {{ todoForm.value | json }}
-    <!-- {state: {name: 'New York', abbrev: 'NY'} } -->
-</div>
+        (click)="onSubmit()">Save
+    </button>
+</section>

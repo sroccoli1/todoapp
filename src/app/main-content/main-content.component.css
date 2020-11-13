@@ -1,3 +1,19 @@
-/* .flex-container{
-    display: flex;
-} */
+.margin{
+    margin: 1rem;
+}
+.margin-right{
+    margin-right: 1rem;
+}
+.margin-right-left{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.title{
+    font-size: 1.3rem; /* TBD properly */
+}
+.text{
+    font-size:1rem;
+}
+button{
+    margin: 6px;
+}

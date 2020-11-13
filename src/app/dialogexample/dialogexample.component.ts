@@ -26,7 +26,8 @@ export class DialogexampleComponent implements OnInit{
   addTodo(){
     let fromInput = {
       title:this.createtodoForm.get('todoName').value, 
-      description:this.createtodoForm.get('todoDescription').value
+      description:this.createtodoForm.get('todoDescription').value,
+      completed:false
     };
     this.todoService.addTodo(fromInput);
   }

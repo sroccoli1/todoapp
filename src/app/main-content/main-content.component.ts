@@ -13,11 +13,11 @@ import {
 export class MainContentComponent{
   constructor(private fb: FormBuilder) { }
   editView:Boolean = false;
-  todoDetails = {title:'Call Kari', description:'History: Subject:'};
+  todoDetails = {title:'Call Kari', description:'History: Subject:', completed:false};
 
   todoForm = this.fb.group({
-    todoName : [''],
-    todoDescription: ['']
+    todoName : [this.todoDetails.title],
+    todoDescription: [this.todoDetails.description]
   });
 
   /** Print the form in the console (when you press on submit button) */ 
