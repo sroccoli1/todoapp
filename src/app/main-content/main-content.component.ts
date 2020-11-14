@@ -17,8 +17,11 @@ export class MainContentComponent{
 
   todoForm = this.fb.group({
     todoName : [this.todoDetails.title],
-    todoDescription: [this.todoDetails.description]
+    todoDescription: [this.todoDetails.description],
+    todoCompleted:[this.todoDetails.completed]
   });
+
+  isCompleted:Boolean;
 
   /** Print the form in the console (when you press on submit button) */ 
   onSubmit(){
@@ -37,5 +40,14 @@ export class MainContentComponent{
 
   onCancel(){
     this.editView = false;        
+  }
+
+  onCompleted(){
+    this.todoDetails.completed = !this.todoDetails.completed;
+    this.isCompleted = this.todoDetails.completed;
+    // console.log(this.todoForm.get('todoComplete'));
+    // this.completed = this.todoForm.get('todoComplete').value;
+    console.log("this todo completed ? ", this.todoDetails.completed);
+    console.log("isCompleted ? ", this.isCompleted);
   }
 }

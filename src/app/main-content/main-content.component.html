@@ -6,7 +6,10 @@
     <div fxLayout="row">
         <mat-checkbox 
             fxLayout="row" 
-            fxFlexAlign="center center">
+            fxFlexAlign="center center"
+            formControlName="todoCompleted"
+            [checked]="isCompleted"
+            (change)="onCompleted()">
         </mat-checkbox>
         <mat-form-field 
             class="margin-right-left" 
@@ -40,7 +43,9 @@
         <mat-checkbox
             fxFlexAlign="center center"
             class="margin-right"
-            aria-labelledby="mark-as-completed">
+            aria-labelledby="mark-as-completed"
+            [checked]="isCompleted"
+            (change)="onCompleted()">
         </mat-checkbox>
         {{todoDetails.title}}
     </header>
