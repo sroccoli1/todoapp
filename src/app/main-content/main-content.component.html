@@ -1,18 +1,20 @@
 <form  
     [formGroup]="todoForm" 
-    fxLayout="column"
+    fxLayout="row"
     class="margin"
-    (ngSubmit)="onSubmit()" 
+    (ngSubmit)="onSubmit()"
     >
     <mat-checkbox
         formControlName="todoCompleted"
         [checked]="isCompleted"
-        (change)="onCompleted($event.checked)">
+        (change)="onCompleted($event.checked)"
+        class="margin-top">
     </mat-checkbox>
-    <div *ngIf="editView; else readView">
+    <div 
+        fxLayout="column" 
+        *ngIf="editView; else readView">
         <mat-form-field 
-            class="margin-right-left" 
-            fxFlexFill 
+            class="margin-right-left"  
             appearance="fill">
             <input 
                 class="title"
@@ -49,27 +51,27 @@
             </button>
         </section>
     </div>
-    <ng-template 
-        class="margin" 
-        #readView>
-        <header 
-            class="title margin">
-            {{todoDetails.title}}
-        </header>
-        <section class="text margin">
-            {{todoDetails.description}}
-        </section> 
-        <section 
-            name="controls" 
-            class="margin" >
-            <button 
-                class="mat-raised-button mat-warn"
-                (click)="delete()">Delete
-            </button>
-            <button 
-                class="mat-raised-button" 
-                (click)="edit()">Edit
-            </button>
-        </section>
+    <ng-template #readView class="margin">
+        <div fxLayout="column">
+            <header 
+                class="title margin">
+                {{todoDetails.title}}
+            </header>
+            <section class="text margin">
+                {{todoDetails.description}}
+            </section> 
+            <section 
+                name="controls" 
+                class="margin" >
+                <button 
+                    class="mat-raised-button mat-warn"
+                    (click)="delete()">Delete
+                </button>
+                <button 
+                    class="mat-raised-button" 
+                    (click)="edit()">Edit
+                </button>
+            </section>
+        </div>
     </ng-template>
 </form>
