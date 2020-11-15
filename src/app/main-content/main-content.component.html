@@ -1,18 +1,15 @@
-<form 
-    *ngIf="editView; else readView" 
+<form  
     [formGroup]="todoForm" 
     fxLayout="column"
     class="margin"
     (ngSubmit)="onSubmit()" 
     >
-    <div fxLayout="row">
-        <mat-checkbox 
-            fxLayout="row" 
-            fxFlexAlign="center center"
-            formControlName="todoCompleted"
-            [checked]="isCompleted"
-            (change)="onCompleted($event.checked)">
-        </mat-checkbox>
+    <mat-checkbox
+        formControlName="todoCompleted"
+        [checked]="isCompleted"
+        (change)="onCompleted($event.checked)">
+    </mat-checkbox>
+    <div *ngIf="editView; else readView">
         <mat-form-field 
             class="margin-right-left" 
             fxFlexFill 
@@ -23,83 +20,56 @@
                 formControlName="todoName" 
                 matNativeControl 
                 placeholder="Title">
+        </mat-form-field>    
+        <br>
+        <mat-form-field appearance="fill">
+            <textarea
+                class="text"
+                type="text"
+                formControlName="todoDescription" 
+                matNativeControl 
+                placeholder="Todos...">
+            </textarea>
         </mat-form-field>
+        <section 
+            name="controls" 
+            class="margin" >
+            <button 
+                class="mat-raised-button mat-warn"
+                (click)="delete()">Delete
+            </button>
+            <button 
+                class="mat-raised-button"
+                (click)="onCancel()">Cancel
+            </button>
+            <button
+                type="submit" 
+                class="mat-raised-button mat-primary"
+                (click)="onSubmit()">Save
+            </button>
+        </section>
     </div>
-    <br>
-    <mat-form-field appearance="fill">
-        <textarea
-            class="text"
-            type="text"
-            formControlName="todoDescription" 
-            matNativeControl 
-            placeholder="Todos...">
-        </textarea>
-    </mat-form-field>
-    <section 
-    name="controls" 
-    class="margin" >
-    <button 
-        class="mat-raised-button mat-warn"
-        (click)="delete()">Delete
-    </button>
-    <button 
-        *ngIf="!editView"
-        class="mat-raised-button" 
-        (click)="edit()">Edit
-    </button>
-    <button 
-        *ngIf="editView" 
-        class="mat-raised-button"
-        (click)="onCancel()">Cancel
-    </button>
-    <button
-        type="submit" 
-        *ngIf="editView" 
-        class="mat-raised-button mat-primary"
-        (click)="onSubmit()">Save
-    </button>
-    </section>
-</form><br>
-<ng-template 
-    class="margin" 
-    #readView>
-    <header 
-        fxLayout="row" 
-        class="title margin">
-        <mat-checkbox
-            fxFlexAlign="center center"
-            class="margin-right"
-            aria-labelledby="mark-as-completed"
-            [checked]="isCompleted"
-            (change)="onCompleted($event.checked)">
-        </mat-checkbox>
-        {{todoDetails.title}}
-    </header>
-    <section class="text margin">
-        {{todoDetails.description}}
-    </section> 
-
-    <section 
-        name="controls" 
-        class="margin" >
-        <button 
-            class="mat-raised-button mat-warn"
-            (click)="delete()">Delete
-        </button>
-        <button 
-            *ngIf="!editView"
-            class="mat-raised-button" 
-            (click)="edit()">Edit
-        </button>
-        <button 
-            *ngIf="editView" 
-            class="mat-raised-button"
-            (click)="onCancel()">Cancel
-        </button>
-        <button 
-            *ngIf="editView" 
-            class="mat-raised-button mat-primary"
-            (click)="onSubmit()">Save
-        </button>
-    </section>
-</ng-template>
+    <ng-template 
+        class="margin" 
+        #readView>
+        <header 
+            class="title margin">
+            {{todoDetails.title}}
+        </header>
+        <section class="text margin">
+            {{todoDetails.description}}
+        </section> 
+        <section 
+            name="controls" 
+            class="margin" >
+            <button 
+                class="mat-raised-button mat-warn"
+                (click)="delete()">Delete
+            </button>
+            <button 
+                class="mat-raised-button" 
+                (click)="edit()">Edit
+            </button>
+        </section>
+    </ng-template>
+</form>
