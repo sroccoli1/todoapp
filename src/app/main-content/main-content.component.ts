@@ -12,6 +12,7 @@ import {
 })
 export class MainContentComponent{
   constructor(private fb: FormBuilder) { }
+  
   editView:Boolean = false;
   todoDetails = {title:'Call Kari', description:'History: Subject:', completed:false};
 
@@ -31,6 +32,8 @@ export class MainContentComponent{
 
   edit(){
     this.editView = true;
+    console.log('isCompleted: ',this.isCompleted);
+
   }
 
   /** Delete the todo */
@@ -42,10 +45,13 @@ export class MainContentComponent{
     this.editView = false;        
   }
 
-  onCompleted(){
-    this.todoDetails.completed = !this.todoDetails.completed;
-    this.isCompleted = this.todoDetails.completed;
-    // console.log(this.todoForm.get('todoComplete'));
+  onCompleted(e:boolean){
+    console.log('e: ', e);
+    this.todoDetails.completed = e;
+    this.isCompleted = e;
+    // this.isCompleted = this.todoDetails.completed;
+    // this.todoForm.get('todoComplete').setValue(e);
+    console.log(this.todoForm.get('todoComplete'));
     // this.completed = this.todoForm.get('todoComplete').value;
     console.log("this todo completed ? ", this.todoDetails.completed);
     console.log("isCompleted ? ", this.isCompleted);

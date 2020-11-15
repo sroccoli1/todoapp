@@ -2,14 +2,16 @@
     *ngIf="editView; else readView" 
     [formGroup]="todoForm" 
     fxLayout="column"
-    class="margin" >
+    class="margin"
+    (ngSubmit)="onSubmit()" 
+    >
     <div fxLayout="row">
         <mat-checkbox 
             fxLayout="row" 
             fxFlexAlign="center center"
             formControlName="todoCompleted"
             [checked]="isCompleted"
-            (change)="onCompleted()">
+            (change)="onCompleted($event.checked)">
         </mat-checkbox>
         <mat-form-field 
             class="margin-right-left" 
@@ -33,27 +35,7 @@
             placeholder="Todos...">
         </textarea>
     </mat-form-field>
-</form><br>
-<ng-template 
-    class="margin" 
-    #readView>
-    <header 
-        fxLayout="row" 
-        class="title margin">
-        <mat-checkbox
-            fxFlexAlign="center center"
-            class="margin-right"
-            aria-labelledby="mark-as-completed"
-            [checked]="isCompleted"
-            (change)="onCompleted()">
-        </mat-checkbox>
-        {{todoDetails.title}}
-    </header>
-    <section class="text margin">
-        {{todoDetails.description}}
-    </section> 
-</ng-template>
-<section 
+    <section 
     name="controls" 
     class="margin" >
     <button 
@@ -70,9 +52,54 @@
         class="mat-raised-button"
         (click)="onCancel()">Cancel
     </button>
-    <button 
+    <button
+        type="submit" 
         *ngIf="editView" 
         class="mat-raised-button mat-primary"
         (click)="onSubmit()">Save
     </button>
-</section>
+    </section>
+</form><br>
+<ng-template 
+    class="margin" 
+    #readView>
+    <header 
+        fxLayout="row" 
+        class="title margin">
+        <mat-checkbox
+            fxFlexAlign="center center"
+            class="margin-right"
+            aria-labelledby="mark-as-completed"
+            [checked]="isCompleted"
+            (change)="onCompleted($event.checked)">
+        </mat-checkbox>
+        {{todoDetails.title}}
+    </header>
+    <section class="text margin">
+        {{todoDetails.description}}
+    </section> 
+
+    <section 
+        name="controls" 
+        class="margin" >
+        <button 
+            class="mat-raised-button mat-warn"
+            (click)="delete()">Delete
+        </button>
+        <button 
+            *ngIf="!editView"
+            class="mat-raised-button" 
+            (click)="edit()">Edit
+        </button>
+        <button 
+            *ngIf="editView" 
+            class="mat-raised-button"
+            (click)="onCancel()">Cancel
+        </button>
+        <button 
+            *ngIf="editView" 
+            class="mat-raised-button mat-primary"
+            (click)="onSubmit()">Save
+        </button>
+    </section>
+</ng-template>
