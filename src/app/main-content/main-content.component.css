@@ -14,9 +14,21 @@
 .title{
     font-size: 1.3rem; /* TBD properly */
 }
+.title-mat-field-bottom{
+    padding-bottom: 6px;
+}
 .text{
     font-size:1rem;
 }
+.text-fied-margin-top{
+    margin-top: 6px ;
+}
 button{
     margin: 6px;
+}
+hr{
+    width: 100%;
+    height: 0;
+    margin: 0;
+    color: black;
 }

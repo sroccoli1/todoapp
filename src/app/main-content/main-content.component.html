@@ -8,13 +8,12 @@
         formControlName="todoCompleted"
         [checked]="isCompleted"
         (change)="onCompleted($event.checked)"
-        class="margin-top">
+        class="margin-top margin-right-left">
     </mat-checkbox>
     <div 
         fxLayout="column">
         <mat-form-field 
-            *ngIf="editView === false ; else readOnlyTitle"    
-            class="margin-right-left"  
+            *ngIf="editView === false ; else readOnlyTitle"      
             appearance="appearance" 
             >
             <mat-label>Anna nimi</mat-label>
@@ -42,7 +41,8 @@
         <hr>
         <mat-form-field 
             appearance="appearance"
-            *ngIf="editView === false; else readOnlyText">
+            *ngIf="editView === false; else readOnlyText"
+            class="text-fied-margin-top">
             <mat-label>Kirjoita tehtävä</mat-label>
             <textarea 
                 matInput
@@ -68,7 +68,7 @@
         </ng-template>
         <section 
             name="controls" 
-            class="margin" >
+            class="" >
             <button 
                 class="mat-raised-button mat-warn"
                 (click)="delete()">Delete
