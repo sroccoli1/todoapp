@@ -11,28 +11,61 @@
         class="margin-top">
     </mat-checkbox>
     <div 
-        fxLayout="column" 
-        *ngIf="editView; else readView">
+        fxLayout="column">
         <mat-form-field 
+            *ngIf="editView === false ; else readOnlyTitle"    
             class="margin-right-left"  
-            appearance="fill">
-            <input 
+            appearance="appearance" 
+            >
+            <mat-label>Anna nimi</mat-label>
+            <input  
+                matInput
                 class="title"
                 type="text"
                 formControlName="todoName" 
                 matNativeControl 
-                placeholder="Title">
-        </mat-form-field>    
-        <br>
-        <mat-form-field appearance="fill">
-            <textarea
+                placeholder="Ex. Soita Kari klo 14."
+                readonly="true">
+        </mat-form-field>
+        <ng-template #readOnlyTitle     
+            class="margin-right-left"  
+            appearance="appearance" >
+            <mat-label>Anna nimi</mat-label>
+            <input  
+                matInput
+                class="title"
+                type="text"
+                formControlName="todoName" 
+                matNativeControl 
+                placeholder="Ex. Soita Kari klo 14.">
+        </ng-template>    
+        <hr>
+        <mat-form-field 
+            appearance="appearance"
+            *ngIf="editView === false; else readOnlyText">
+            <mat-label>Kirjoita tehtävä</mat-label>
+            <textarea 
+                matInput
                 class="text"
                 type="text"
                 formControlName="todoDescription" 
                 matNativeControl 
-                placeholder="Todos...">
+                placeholder="Ex. Ensi viime..."
+                readonly="true">
             </textarea>
         </mat-form-field>
+        <ng-template #readOnlyText
+            appearance="appearance">
+            <mat-label>Kirjoita tehtävä</mat-label>
+            <textarea 
+                matInput
+                class="text"
+                type="text"
+                formControlName="todoDescription" 
+                matNativeControl 
+                placeholder="Ex. Ensi viime...">
+            </textarea>
+        </ng-template>
         <section 
             name="controls" 
             class="margin" >
@@ -41,37 +74,21 @@
                 (click)="delete()">Delete
             </button>
             <button 
+                *ngIf="editView"
                 class="mat-raised-button"
                 (click)="onCancel()">Cancel
             </button>
             <button
+                *ngIf="editView === false" 
+                class="mat-raised-button" 
+                (click)="edit()">Edit
+            </button>
+            <button
+                *ngIf="editView"    
                 type="submit" 
                 class="mat-raised-button mat-primary"
                 (click)="onSubmit()">Save
             </button>
         </section>
     </div>
-    <ng-template #readView class="margin">
-        <div fxLayout="column">
-            <header 
-                class="title margin">
-                {{todoDetails.title}}
-            </header>
-            <section class="text margin">
-                {{todoDetails.description}}
-            </section> 
-            <section 
-                name="controls" 
-                class="margin" >
-                <button 
-                    class="mat-raised-button mat-warn"
-                    (click)="delete()">Delete
-                </button>
-                <button 
-                    class="mat-raised-button" 
-                    (click)="edit()">Edit
-                </button>
-            </section>
-        </div>
-    </ng-template>
 </form>

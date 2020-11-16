@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { 
   FormBuilder, 
   ValidationErrors, 
@@ -10,10 +10,11 @@ import {
   styleUrls: ['./main-content.component.css'],
   encapsulation: ViewEncapsulation.Emulated
 })
-export class MainContentComponent{
+export class MainContentComponent implements OnInit{
   constructor(private fb: FormBuilder) { }
   
   editView:Boolean = false;
+  appearance = "standard";
   todoDetails = {title:'Call Kari', description:'History: Subject:', completed:false};
 
   todoForm = this.fb.group({
@@ -21,6 +22,9 @@ export class MainContentComponent{
     todoDescription: [this.todoDetails.description],
     todoCompleted:[this.todoDetails.completed]
   });
+
+  ngOnInit(){
+  }
 
   isCompleted:Boolean;
 
@@ -32,28 +36,33 @@ export class MainContentComponent{
 
   edit(){
     this.editView = true;
+    this.appearance = "fill";
     console.log('isCompleted: ',this.isCompleted);
-
   }
 
   /** Delete the todo */
   delete(){
-    console.log("closing");
+    console.log("deleted all and closing...");
+    // this.todoDetails = null; //= {title:'', description:'', completed:false}
+    this.todoDetails = {title:'', description:'', completed:false}
+    this.todoForm.patchValue({
+      todoName : [this.todoDetails.title],
+      todoDescription: [this.todoDetails.description],
+      todoCompleted:[this.todoDetails.completed]
+    });
   }
 
   onCancel(){
-    this.editView = false;        
+    this.editView = false;
+    this.appearance = "standard";     
   }
 
   onCompleted(e:boolean){
     console.log('e: ', e);
     this.todoDetails.completed = e;
     this.isCompleted = e;
-    // this.isCompleted = this.todoDetails.completed;
-    // this.todoForm.get('todoComplete').setValue(e);
-    console.log(this.todoForm.get('todoComplete'));
-    // this.completed = this.todoForm.get('todoComplete').value;
-    console.log("this todo completed ? ", this.todoDetails.completed);
-    console.log("isCompleted ? ", this.isCompleted);
+    // console.log(this.todoForm.get('todoComplete'));
+    // console.log("this todo completed ? ", this.todoDetails.completed);
+    // console.log("isCompleted ? ", this.isCompleted);
   }
 }
