@@ -1,47 +1,54 @@
 <form  
     [formGroup]="todoForm" 
-    fxLayout="row"
+    fxLayout="column"
     class="margin"
-    (ngSubmit)="onSubmit()"
-    >
-    <mat-checkbox
-        formControlName="todoCompleted"
-        [checked]="isCompleted"
-        (change)="onCompleted($event.checked)"
-        class="margin-top margin-right-left">
-    </mat-checkbox>
-    <div 
-        fxLayout="column">
-        <mat-form-field 
-            *ngIf="editView === false ; else readOnlyTitle"      
-            appearance="appearance" 
-            >
-            <mat-label>Anna nimi</mat-label>
-            <input  
-                matInput
-                class="title"
-                type="text"
-                formControlName="todoName" 
-                matNativeControl 
-                placeholder="Ex. Soita Kari klo 14."
-                readonly="true">
-        </mat-form-field>
-        <ng-template #readOnlyTitle     
-            class="margin-right-left"  
-            appearance="appearance" >
-            <mat-label>Anna nimi</mat-label>
-            <input  
-                matInput
-                class="title"
-                type="text"
-                formControlName="todoName" 
-                matNativeControl 
-                placeholder="Ex. Soita Kari klo 14.">
-        </ng-template>    
-        <hr>
-        <mat-form-field 
-            appearance="appearance"
-            *ngIf="editView === false; else readOnlyText"
+    (ngSubmit)="onSubmit()">
+    <div fxLayout="row">
+        <mat-checkbox
+            fxFlex="1 1 15%"
+            fxLayoutAlign="center center"
+            formControlName="todoCompleted"
+            [checked]="isCompleted"
+            (change)="onCompleted($event.checked)">
+        </mat-checkbox>
+        <div fxLayout="column" fxFlex="1 1 85%"
+            *ngIf="editView === false ; else editTitle">    
+            <mat-form-field 
+                >
+                <mat-label>Anna nimi</mat-label>
+                <input  
+                    matInput
+                    class="title"
+                    type="text"
+                    formControlName="todoName" 
+                    matNativeControl 
+                    placeholder="Ex. Soita Kari klo 14."
+                    readonly="true">
+            </mat-form-field>
+        </div>
+        <ng-template #editTitle >
+            <mat-form-field 
+                fxLayout="column" 
+                fxFlex="1 1 85%" 
+                fxFlexFill   
+                [appearance]="appearance">            
+                <mat-label>Anna nimi</mat-label>
+                <input 
+                    appearance="appearance"  
+                    matInput
+                    class="title"
+                    type="text"
+                    formControlName="todoName" 
+                    matNativeControl 
+                    placeholder="Ex. Soita Kari klo 14.">
+            </mat-form-field>
+        </ng-template>
+    </div>    
+    <!-- <hr> -->
+    <div fxLayout="column"
+        *ngIf="editView === false; else editText">
+        <mat-form-field
+            [appearance]="appearance"
             class="text-fied-margin-top">
             <mat-label>Kirjoita tehtävä</mat-label>
             <textarea 
@@ -54,8 +61,11 @@
                 readonly="true">
             </textarea>
         </mat-form-field>
-        <ng-template #readOnlyText
-            appearance="appearance">
+    </div>
+    <ng-template #editText>
+        <mat-form-field 
+            [appearance]="appearance"
+            class="text-fied-margin-top">
             <mat-label>Kirjoita tehtävä</mat-label>
             <textarea 
                 matInput
@@ -65,30 +75,30 @@
                 matNativeControl 
                 placeholder="Ex. Ensi viime...">
             </textarea>
-        </ng-template>
-        <section 
-            name="controls" 
-            class="" >
-            <button 
-                class="mat-raised-button mat-warn"
-                (click)="delete()">Delete
-            </button>
-            <button 
-                *ngIf="editView"
-                class="mat-raised-button"
-                (click)="onCancel()">Cancel
-            </button>
-            <button
-                *ngIf="editView === false" 
-                class="mat-raised-button" 
-                (click)="edit()">Edit
-            </button>
-            <button
-                *ngIf="editView"    
-                type="submit" 
-                class="mat-raised-button mat-primary"
-                (click)="onSubmit()">Save
-            </button>
-        </section>
-    </div>
+        </mat-form-field>
+    </ng-template>
+    <section 
+        name="controls" 
+        class="" >
+        <button 
+            class="mat-raised-button mat-warn"
+            (click)="delete()">Delete
+        </button>
+        <button 
+            *ngIf="editView"
+            class="mat-raised-button"
+            (click)="onCancel()">Cancel
+        </button>
+        <button
+            *ngIf="editView === false" 
+            class="mat-raised-button" 
+            (click)="edit()">Edit
+        </button>
+        <button
+            *ngIf="editView"    
+            type="submit" 
+            class="mat-raised-button mat-primary"
+            (click)="onSubmit()">Save
+        </button>
+    </section>
 </form>
