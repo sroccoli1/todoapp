@@ -1,8 +1,10 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { 
   FormBuilder, 
+  FormGroup, 
   ValidationErrors, 
   ValidatorFn } from '@angular/forms';
+import { ManagetodoService } from '../shared/managetodo.service';
 
 @Component({
   selector: 'app-main-content',
@@ -11,45 +13,46 @@ import {
   encapsulation: ViewEncapsulation.Emulated
 })
 export class MainContentComponent implements OnInit{
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private mgtodo: ManagetodoService) { }
   
   editView:Boolean = false;
   appearance = "standard";
-  todoDetails = {title:'Call Kari', description:'History: Subject:', completed:false};
-
-  todoForm = this.fb.group({
-    todoName : [this.todoDetails.title],
-    todoDescription: [this.todoDetails.description],
-    todoCompleted:[this.todoDetails.completed]
-  });
+  @Input() todoDetails:{title:string, description:string, completed:boolean};
+  // @Input() todoDetails = {title:'', description:'', completed:false};
+  todoForm:FormGroup;
 
   ngOnInit(){
+    this.todoForm = this.fb.group({
+      title : [this.todoDetails.title],
+      description: [this.todoDetails.description],
+      completed:[this.todoDetails.completed]
+    });
   }
 
   isCompleted:Boolean;
 
   /** Print the form in the console (when you press on submit button) */ 
   onSubmit(){
-    console.log(this.todoForm);
-    // console.log(this.todoForm.get('todoDescription'));
+    console.log("Added: ", this.todoForm.value);
+    this.mgtodo.addTodo(this.todoForm.value);
   }
 
   edit(){
     this.editView = true;
     this.appearance = "fill";
-    console.log('isCompleted: ',this.isCompleted);
+    console.log('isCompleted: ', this.isCompleted);
   }
 
   /** Delete the todo */
   delete(){
     console.log("deleted all and closing...");
     // this.todoDetails = null; //= {title:'', description:'', completed:false}
-    this.todoDetails = {title:'', description:'', completed:false}
-    this.todoForm.patchValue({
-      todoName : [this.todoDetails.title],
-      todoDescription: [this.todoDetails.description],
-      todoCompleted:[this.todoDetails.completed]
-    });
+    // this.todoDetails = {title:'', description:'', completed:false}
+    // this.todoForm.patchValue({
+    //   title : [this.todoDetails.title],
+    //   description: [this.todoDetails.description],
+    //   completed:[this.todoDetails.completed]
+    // });
   }
 
   onCancel(){

@@ -7,7 +7,7 @@
         <mat-checkbox
             fxFlex="1 1 15%"
             fxLayoutAlign="center center"
-            formControlName="todoCompleted"
+            formControlName="completed"
             [checked]="isCompleted"
             (change)="onCompleted($event.checked)">
         </mat-checkbox>
@@ -20,7 +20,7 @@
                     matInput
                     class="title"
                     type="text"
-                    formControlName="todoName" 
+                    formControlName="title" 
                     matNativeControl 
                     placeholder="Ex. Soita Kari klo 14."
                     readonly="true">
@@ -38,7 +38,7 @@
                     matInput
                     class="title"
                     type="text"
-                    formControlName="todoName" 
+                    formControlName="title" 
                     matNativeControl 
                     placeholder="Ex. Soita Kari klo 14.">
             </mat-form-field>
@@ -55,7 +55,7 @@
                 matInput
                 class="text"
                 type="text"
-                formControlName="todoDescription" 
+                formControlName="description" 
                 matNativeControl 
                 placeholder="Ex. Ensi viime..."
                 readonly="true">
@@ -71,7 +71,7 @@
                 matInput
                 class="text"
                 type="text"
-                formControlName="todoDescription" 
+                formControlName="description" 
                 matNativeControl 
                 placeholder="Ex. Ensi viime...">
             </textarea>

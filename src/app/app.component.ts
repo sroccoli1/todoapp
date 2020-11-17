@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todolist';
+  selectedTodo:{title:string, description:string, completed:boolean};
+  details:Boolean = false;
+
+  displayDetails(v:{title:string, description:string, completed:boolean}){
+    console.log("displayDetails: ", v);
+    this.selectedTodo = v;
+    this.details = true;
+  }
 }

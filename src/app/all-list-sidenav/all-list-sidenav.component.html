@@ -7,7 +7,7 @@
         fxFill>
         <mat-nav-list *ngFor="let todo of todolist">
             <mat-card>
-                <a mat-list-item href="#">{{todo.title}}</a>
+                <a mat-list-item href="#" (click)="onSelect(todo)">{{todo.title}}</a>
             </mat-card><br>
         </mat-nav-list><br>
         <button 
