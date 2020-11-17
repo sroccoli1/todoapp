@@ -11,7 +11,7 @@ export class AppComponent {
   details:Boolean = false;
 
   displayDetails(v:{title:string, description:string, completed:boolean}){
-    console.log("displayDetails: ", v);
+    // console.log("displayDetails: ", v);
     this.selectedTodo = v;
     this.details = true;
   }

@@ -23,7 +23,6 @@ export class AllListSidenavComponent implements OnInit {
   }
 
   onSelect(v:{title:string, description:string, completed:boolean}){
-    console.log("to be emitted: ", v);
     this.todoSelection.emit(v);
   }
 

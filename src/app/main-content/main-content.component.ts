@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation, SimpleChanges } from '@angular/core';
 import { 
   FormBuilder, 
   FormGroup, 
@@ -16,12 +16,13 @@ export class MainContentComponent implements OnInit{
   constructor(private fb: FormBuilder, private mgtodo: ManagetodoService) { }
   
   editView:Boolean = false;
+  isCompleted:Boolean;
   appearance = "standard";
   @Input() todoDetails:{title:string, description:string, completed:boolean};
-  // @Input() todoDetails = {title:'', description:'', completed:false};
-  todoForm:FormGroup;
+  todoForm: FormGroup;
 
   ngOnInit(){
+    console.log("todoform");
     this.todoForm = this.fb.group({
       title : [this.todoDetails.title],
       description: [this.todoDetails.description],
@@ -29,7 +30,28 @@ export class MainContentComponent implements OnInit{
     });
   }
 
-  isCompleted:Boolean;
+  /** Updates the form if click on another todo. */
+  ngOnChanges(changes: SimpleChanges){
+    let newtodo;
+    let previoustodo;
+    for (const propName in changes) {
+      const chng = changes[propName];
+      newtodo  = chng.currentValue;
+      previoustodo = chng.previousValue;
+    }
+    this.todoDetails = {
+      title: newtodo.title,
+      description: newtodo.description,
+      completed: newtodo.completed
+    };
+    if(previoustodo !== undefined){
+      this.todoForm.setValue({
+        title : [this.todoDetails.title],
+        description: [this.todoDetails.description],
+        completed:[this.todoDetails.completed]
+      });
+    }
+  }
 
   /** Print the form in the console (when you press on submit button) */ 
   onSubmit(){
@@ -44,15 +66,9 @@ export class MainContentComponent implements OnInit{
   }
 
   /** Delete the todo */
-  delete(){
-    console.log("deleted all and closing...");
-    // this.todoDetails = null; //= {title:'', description:'', completed:false}
-    // this.todoDetails = {title:'', description:'', completed:false}
-    // this.todoForm.patchValue({
-    //   title : [this.todoDetails.title],
-    //   description: [this.todoDetails.description],
-    //   completed:[this.todoDetails.completed]
-    // });
+  delete(v:{title:string, description:string, completed:boolean}){
+    console.log("Delete and closing...");
+    this.mgtodo.deleteTodo(v);
   }
 
   onCancel(){
@@ -64,8 +80,5 @@ export class MainContentComponent implements OnInit{
     console.log('e: ', e);
     this.todoDetails.completed = e;
     this.isCompleted = e;
-    // console.log(this.todoForm.get('todoComplete'));
-    // console.log("this todo completed ? ", this.todoDetails.completed);
-    // console.log("isCompleted ? ", this.isCompleted);
   }
 }

@@ -16,8 +16,6 @@ export class ManagetodoService {
 
   /** Add a todo to this.todos - the todo-list. */
   addTodo(valueFromInput: { title: string, description: string, completed:boolean}){
-    // let newTodo = new Todo(valueFromInput.title, valueFromInput.description);
-    // console.log('addTodo, from input :', newTodo);
     this.todos.push(valueFromInput);
     console.table(this.todos);
   }
@@ -32,13 +30,15 @@ export class ManagetodoService {
   }
 
   /** Clears this.todos - the todo-list and @returns an empty array of todos. */
-  clearTodo(){
+  deleteAllTodos(){
     this.todos = [];
     return this.todos;
   }
 
   /** Delete this todo. */
-  delete(valueFromInput:{title:string, description:string, completed:boolean}){
+  deleteTodo(valueFromInput:{title:string, description:string, completed:boolean}){
     this.todos.splice(this.todos.indexOf(valueFromInput));
+    console.log("ManageTodoService DeleteTodo");
+    console.table(this.todos);
   }
 }
