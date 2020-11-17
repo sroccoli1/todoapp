@@ -16,6 +16,7 @@ export class MainContentComponent implements OnInit{
   constructor(private fb: FormBuilder, private mgtodo: ManagetodoService) { }
   
   editView:Boolean = false;
+  isFormHidden:Boolean=true;
   isCompleted:Boolean;
   appearance = "standard";
   @Input() todoDetails:{title:string, description:string, completed:boolean};
@@ -51,6 +52,7 @@ export class MainContentComponent implements OnInit{
         completed:[this.todoDetails.completed]
       });
     }
+    this.isFormHidden = false;
   }
 
   /** Print the form in the console (when you press on submit button) */ 
@@ -69,6 +71,7 @@ export class MainContentComponent implements OnInit{
   delete(v:{title:string, description:string, completed:boolean}){
     console.log("Delete and closing...");
     this.mgtodo.deleteTodo(v);
+    this.isFormHidden = true;
   }
 
   onCancel(){
