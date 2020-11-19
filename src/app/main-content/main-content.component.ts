@@ -55,12 +55,10 @@ export class MainContentComponent implements OnInit{
     this.isFormHidden = false;
   }
 
-  /** Print the form in the console (when you press on submit button) */ 
-  onSubmit(){
-    // console.log("Saving... ", this.todoForm.value);
-    this.mgtodo.updateTodo(this.todoForm.value);
-    this.editView = false;
-  }
+  // onSubmit(){
+  //   this.mgtodo.updateTodo(this.todoForm.value);
+  //   this.editView = false;
+  // }
 
   edit(){ 
     this.editView = true;
@@ -70,7 +68,6 @@ export class MainContentComponent implements OnInit{
 
   /** Delete the todo */
   delete(v:{title:string, description:string, completed:boolean}){
-    console.log("Delete and closing...");
     this.mgtodo.deleteTodo(v);
     this.isFormHidden = true;
   }
@@ -81,7 +78,6 @@ export class MainContentComponent implements OnInit{
   }
 
   onCompleted(e:boolean){
-    console.log('e: ', e);
     this.todoDetails.completed = e;
     this.isCompleted = e;
   }
