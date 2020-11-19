@@ -16,6 +16,7 @@ export class ManagetodoService {
 
   /** Add a todo to this.todos - the todo-list. */
   addTodo(valueFromInput: { title: string, description: string, completed:boolean}){
+
     this.todos.push(valueFromInput);
     console.table(this.todos);
   }
@@ -30,7 +31,13 @@ export class ManagetodoService {
   }
 
   updateTodo(valueFromInput:{title:string, description:string, completed:boolean}){
-    this.todos.splice(this.todos.indexOf(valueFromInput), 1);
+    console.log("Updating ", valueFromInput);
+    this.todos.forEach((value, index)=>{
+      if(value.title == valueFromInput.title){
+        // console.log("index: ", index, "todo: ", this.todos[index]);
+        this.todos[index] = valueFromInput;
+      }
+    });
   }
 
   /** Clears this.todos - the todo-list and @returns an empty array of todos. */

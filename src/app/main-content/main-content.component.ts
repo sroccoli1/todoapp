@@ -57,8 +57,9 @@ export class MainContentComponent implements OnInit{
 
   /** Print the form in the console (when you press on submit button) */ 
   onSubmit(){
-    console.log("Added: ", this.todoForm.value);
-    this.mgtodo.addTodo(this.todoForm.value);
+    // console.log("Saving... ", this.todoForm.value);
+    this.mgtodo.updateTodo(this.todoForm.value);
+    this.editView = false;
   }
 
   edit(){ 
