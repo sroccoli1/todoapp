@@ -23,7 +23,7 @@ export class MainContentComponent implements OnInit{
   todoForm: FormGroup;
 
   ngOnInit(){
-    console.log("todoform");
+    console.log("OnInit todoform");
     this.todoForm = this.fb.group({
       title : [this.todoDetails.title],
       description: [this.todoDetails.description],
@@ -33,18 +33,18 @@ export class MainContentComponent implements OnInit{
 
   /** Updates the form if click on another todo. */
   ngOnChanges(changes: SimpleChanges){
-    let newtodo;
-    let previoustodo;
+    let newtodo: string;
+    let previoustodo : string;
+    let changeLog=[];
     for (const propName in changes) {
       const chng = changes[propName];
-      newtodo  = chng.currentValue;
-      previoustodo = chng.previousValue;
+      newtodo  = JSON.stringify(chng.currentValue);
+      previoustodo = JSON.stringify(chng.previousValue);
+      changeLog.push(`${propName}: ${newtodo}`);
     }
-    this.todoDetails = {
-      title: newtodo.title,
-      description: newtodo.description,
-      completed: newtodo.completed
-    };
+
+    this.todoDetails = JSON.parse(changeLog[0].substring(12));
+    
     if(previoustodo !== undefined){
       this.todoForm.setValue({
         title : [this.todoDetails.title],
@@ -61,7 +61,7 @@ export class MainContentComponent implements OnInit{
     this.mgtodo.addTodo(this.todoForm.value);
   }
 
-  edit(){
+  edit(){ 
     this.editView = true;
     this.appearance = "fill";
     console.log('isCompleted: ', this.isCompleted);
