@@ -27,3 +27,19 @@ This sprint will use the basic features I learned throughout the Angular basics 
 - Impacted: MatDialog. Trying to fix the Mat import in the NgModule
 - Impacted: MatDialog. Problem at compilation, seems to be MatDialog...
 - Impacted: MatDialog. Modal do not work
+
+## Sprint notes : 2020, Nov 11 - Nov 18
+
+### Coverage
+This sprint will use more features I learned throughout the Angular course.
+
+- New Todos will be saved by the service and all the todos will be displayed in the sidenav
+- By default the right side (home) will empty.
+- When you click on a todo title on the left, title, text, one checkbox and edit / save / delete - buttons.
+
+### Out of this sprint:
+- Routing 
+- HTTP
+... But found good documentation about it.
+
+### Current and limitations : 
