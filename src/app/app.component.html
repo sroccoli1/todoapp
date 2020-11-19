@@ -1,17 +1,13 @@
 <app-header></app-header>
 <div fxLayout="row" class="main-style">
-  <app-all-list-sidenav  
-    fxFlex="50">
-  </app-all-list-sidenav>
-
-  <!-- <app-all-list-sidenav 
+  <app-all-list-sidenav 
     (todoSelection)="displayDetails($event)" 
     fxFlex="50">
-  </app-all-list-sidenav> -->
-  <!-- <app-main-content 
+  </app-all-list-sidenav>
+  <app-main-content 
     *ngIf="details===true; else emptypage" 
     [todoDetails]="selectedTodo" 
     fxFlex="50">
   </app-main-content>
-  <ng-template #emptypage></ng-template> -->
+  <ng-template #emptypage></ng-template>
 </div>

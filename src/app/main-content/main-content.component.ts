@@ -16,10 +16,10 @@ export class MainContentComponent implements OnInit{
   constructor(private fb: FormBuilder, private mgtodo: ManagetodoService) { }
   
   editView:Boolean = false;
-  isFormHidden:Boolean=true;
+  isFormHidden:Boolean = true;
   isCompleted:Boolean;
   appearance = "standard";
-  @Input() todoDetails:{title:string, description:string, completed:boolean};
+  @Input() todoDetails:{id:string, title:string, description:string, completed:boolean};
   todoForm: FormGroup;
 
   ngOnInit(){
@@ -29,6 +29,7 @@ export class MainContentComponent implements OnInit{
       description: [this.todoDetails.description],
       completed:[this.todoDetails.completed]
     });
+    this.isCompleted = this.todoDetails.completed;
   }
 
   /** Updates the form if click on another todo. */
@@ -45,7 +46,7 @@ export class MainContentComponent implements OnInit{
 
     this.todoDetails = JSON.parse(changeLog[0].substring(12));
     
-    if(previoustodo !== undefined){
+    if(previoustodo !== undefined){ //Prevents error 
       this.todoForm.setValue({
         title : [this.todoDetails.title],
         description: [this.todoDetails.description],
@@ -53,12 +54,14 @@ export class MainContentComponent implements OnInit{
       });
     }
     this.isFormHidden = false;
+    this.editView = false ;
+    this.isCompleted = this.todoDetails.completed;
   }
 
-  // onSubmit(){
-  //   this.mgtodo.updateTodo(this.todoForm.value);
-  //   this.editView = false;
-  // }
+  onSubmit(){
+    this.mgtodo.updateTodo(this.todoDetails.id, this.todoForm.value);
+    this.editView = false;
+  }
 
   edit(){ 
     this.editView = true;
@@ -67,8 +70,8 @@ export class MainContentComponent implements OnInit{
   }
 
   /** Delete the todo */
-  delete(v:{title:string, description:string, completed:boolean}){
-    this.mgtodo.deleteTodo(v);
+  delete(id:string){
+    this.mgtodo.deleteTodo(id);
     this.isFormHidden = true;
   }
 
@@ -78,7 +81,7 @@ export class MainContentComponent implements OnInit{
   }
 
   onCompleted(e:boolean){
-    this.todoDetails.completed = e;
+    this.mgtodo.updateStatus(this.todoDetails.id, e);
     this.isCompleted = e;
   }
 }

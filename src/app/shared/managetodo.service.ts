@@ -45,15 +45,27 @@ export class ManagetodoService {
     console.table(this.todos);
   }
 
-  // updateTodo(valueFromInput:{title:string, description:string, completed:boolean}){
-  //   console.log("Updating ", valueFromInput);
-  //   this.todos.forEach((value, index)=>{
-  //     if(value.title == valueFromInput.title){
-  //       // console.log("index: ", index, "todo: ", this.todos[index]);
-  //       this.todos[index] = valueFromInput;
-  //     }
-  //   });
-  // }
+  updateTodo(todoId:string, valueFromInput:{title:string, description:string, completed:boolean}){
+    console.log("Updating", valueFromInput);
+    this.todos.forEach((value, index)=>{
+      if(value.id == todoId){
+        // console.log("index: ", index, "todo: ", this.todos[index]);
+        this.todos[index].title = valueFromInput.title;
+        this.todos[index].description = valueFromInput.description;
+        this.todos[index].completed = valueFromInput.completed;
+      }
+    });
+  }
+
+  updateStatus(todoId:string, status:boolean){
+    console.log("Updating completed property...", status);
+    this.todos.forEach((value, index)=>{
+      if(value.id == todoId){
+        // console.log("index: ", index, "todo: ", this.todos[index]);
+        this.todos[index].completed = status;
+      }
+    });
+  }
 
   /** Clears this.todos - the todo-list and @returns an empty array of todos. */
   deleteAllTodos(){
@@ -62,11 +74,10 @@ export class ManagetodoService {
   }
 
   /** Delete this todo. */
-  deleteTodo(valueFromInput:{title:string, description:string, completed:boolean}){
-    console.log("Delete ",valueFromInput);
+  deleteTodo(id:string){
+    console.log("Delete ", id);
     this.todos.forEach((value, index)=>{
-      if( value.title == valueFromInput.title &&
-          value.description == valueFromInput.description) {
+      if(value.id == id) {
         this.todos.splice(index,1);
       }
     });

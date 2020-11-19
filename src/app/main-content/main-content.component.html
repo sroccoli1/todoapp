@@ -9,7 +9,7 @@
             fxFlex="1 1 15%"
             fxLayoutAlign="center center"
             formControlName="completed"
-            [checked]="isCompleted"
+            [checked]="isCompleted === true"
             (change)="onCompleted($event.checked)">
         </mat-checkbox>
         <div fxLayout="column" fxFlex="1 1 85%"
@@ -83,7 +83,7 @@
         class="" >
         <button 
             class="mat-raised-button mat-warn"
-            (click)="delete(todoDetails)">Delete
+            (click)="delete(todoDetails.id)">Delete
         </button>
         <button 
             *ngIf="editView"
