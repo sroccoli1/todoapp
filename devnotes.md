@@ -1,4 +1,9 @@
-## First sprint notes: 2020, Oct 19 - Oct 27
+# Sprint Log
+
+## Contents
+- [Todo App Project](https://github.com/sroccoli1/todoapp)
+
+## Sprint #1 : 2020, Oct 19 - Oct 27
 
 ### Coverage
 This sprint will use the basic features I learned throughout the Angular basics course and I'll learn and use Material design on the way.
@@ -28,7 +33,7 @@ This sprint will use the basic features I learned throughout the Angular basics 
 - Impacted: MatDialog. Problem at compilation, seems to be MatDialog...
 - Impacted: MatDialog. Modal do not work
 
-## Sprint notes : 2020, Nov 11 - Nov 18
+## Sprint #2 : 2020, Nov 11 - Nov 18
 
 ### Coverage
 This sprint will use more features I learned throughout the Angular course.
@@ -42,4 +47,12 @@ This sprint will use more features I learned throughout the Angular course.
 - HTTP
 ... But found good documentation about it.
 
-### Current and limitations : 
+### Current and limitations :
+
+- See the video on Youtube (unlisted).<br><br>
+[![Sprint 2 Outcome](https://media.giphy.com/media/k6W89xhU589HsABNrW/giphy.gif)](https://youtu.be/QGQlOSxWpV8)<br>
+- CRUD locally only.
+- Checkbox goes randomly checked when you click on a todo title on the left.  
+
+## Contents
+- [Todo App Project](https://github.com/sroccoli1/todoapp)
