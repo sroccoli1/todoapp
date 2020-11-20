@@ -49,7 +49,8 @@ This sprint will use more features I learned throughout the Angular course.
 
 ### Current and limitations :
 
-- See the video on Youtube (unlisted).<br><br>
+- See the video on Youtube (unlisted).
+- In this video we create 3 todos, update then delete them.<br><br>
 [![Sprint 2 Outcome](https://media.giphy.com/media/k6W89xhU589HsABNrW/giphy.gif)](https://youtu.be/QGQlOSxWpV8)<br>
 - CRUD locally only.
 - Checkbox goes randomly checked when you click on a todo title on the left.  
