@@ -4,6 +4,7 @@
     (todoSelection)="displayDetails($event)" 
     fxFlex="50">
   </app-all-list-sidenav>
+  <router-outlet></router-outlet>
   <app-main-content 
     *ngIf="details===true; else emptypage" 
     [todoDetails]="selectedTodo" 

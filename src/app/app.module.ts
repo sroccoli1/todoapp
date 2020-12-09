@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DialogexampleComponent } from './dialogexample/dialogexample.component';
 import { ManagetodoService } from './shared/managetodo.service';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ManagetodoService } from './shared/managetodo.service';
     AllListSidenavComponent,
     MainContentComponent,
     DialogexampleComponent,
+    HomeComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
