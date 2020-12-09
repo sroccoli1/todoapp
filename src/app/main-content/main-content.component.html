@@ -3,7 +3,7 @@
     fxLayout="column"
     class="margin"
     (ngSubmit)="onSubmit()"
-    *ngIf="isFormHidden===false">
+    >
     <div fxLayout="row">
         <mat-checkbox
             fxFlex="1 1 15%"
@@ -82,6 +82,7 @@
         name="controls" 
         class="" >
         <button 
+            type="button"
             class="mat-raised-button mat-warn"
             (click)="delete(todoDetails.id)">Delete
         </button>

@@ -12,7 +12,7 @@ export class ManagetodoService {
   //   {title:'Check month strategy', description:'Evaluate 3 options', completed:false},
   // ];
 
-  todos:Todo[] = [];
+  private todos:Todo[] = [];
 
   constructor() { }
 
@@ -31,11 +31,14 @@ export class ManagetodoService {
     return this.todos;
   }
 
-  // getTodosInArray(){
-  //   return this.todos.forEach(element => {
-      
-  //   });;
-  // }
+  getTodo(id: string){
+    const todo = this.todos.find(
+      (s)=>{
+        return s.id === id;
+      }
+    );
+    return todo;
+  }
 
   toConsole(){
     console.table(this.todos);

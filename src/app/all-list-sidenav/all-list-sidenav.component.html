@@ -9,7 +9,7 @@
             <mat-card>
                 <a  [ngClass]="{'underline':todo.completed === true}" 
                     mat-list-item href="#" 
-                    (click)="onSelect(todo)">{{todo.title}}
+                    [routerLink]="[todo.id]">{{todo.title}}
                 </a>
             </mat-card><br>
         </mat-nav-list><br>
