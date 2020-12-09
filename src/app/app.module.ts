@@ -1,22 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { from } from 'rxjs';
-import { HeaderComponent } from './header/header.component';
-import { AllListSidenavComponent } from './all-list-sidenav/all-list-sidenav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MainContentComponent } from './main-content/main-content.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { DialogexampleComponent } from './dialogexample/dialogexample.component';
-import { ManagetodoService } from './shared/managetodo.service';
-
 import { MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material/dialog';
 import { MaterialModule } from './material/material.module';
+
+import { HeaderComponent } from './header/header.component';
+import { AllListSidenavComponent } from './all-list-sidenav/all-list-sidenav.component';
+import { MainContentComponent } from './main-content/main-content.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { DialogexampleComponent } from './dialogexample/dialogexample.component';
+import { ManagetodoService } from './shared/managetodo.service';
 
 @NgModule({
   declarations: [
@@ -31,10 +29,8 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-
     LayoutModule,
     FlexLayoutModule,
-    
     AppRoutingModule,
     MaterialModule
   ],
@@ -49,5 +45,3 @@ import { MaterialModule } from './material/material.module';
   entryComponents: [DialogexampleComponent]
 })
 export class AppModule { }
-
-
