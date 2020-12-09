@@ -12,11 +12,7 @@ export class ManagetodoService {
   //   {title:'Check month strategy', description:'Evaluate 3 options', completed:false},
   // ];
 
-  todos = [
-    new Todo('Call Kari','History: \n Subject:'),
-    new Todo('Find course','Browse: OAMK Tek courses :'),
-    new Todo('Check month strategy', 'Evaluate 3 options')
-  ]
+  todos:Todo[] = [];
 
   constructor() { }
 

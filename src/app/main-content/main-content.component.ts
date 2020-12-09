@@ -17,7 +17,7 @@ export class MainContentComponent implements OnInit{
   
   editView:Boolean = false;
   isFormHidden:Boolean = true;
-  isCompleted:Boolean;
+  //isCompleted:Boolean;
   appearance = "standard";
   @Input() todoDetails:{id:string, title:string, description:string, completed:boolean};
   todoForm: FormGroup;
@@ -29,7 +29,7 @@ export class MainContentComponent implements OnInit{
       description: [this.todoDetails.description],
       completed:[this.todoDetails.completed]
     });
-    this.isCompleted = this.todoDetails.completed;
+    //this.isCompleted = this.todoDetails.completed;
   }
 
   /** Updates the form if click on another todo. */
@@ -55,7 +55,7 @@ export class MainContentComponent implements OnInit{
     }
     this.isFormHidden = false;
     this.editView = false ;
-    this.isCompleted = this.todoDetails.completed;
+    //this.isCompleted = this.todoDetails.completed;
   }
 
   onSubmit(){
@@ -66,7 +66,7 @@ export class MainContentComponent implements OnInit{
   edit(){ 
     this.editView = true;
     this.appearance = "fill";
-    console.log('isCompleted: ', this.isCompleted);
+    //console.log('isCompleted: ', this.isCompleted);
   }
 
   /** Delete the todo */
@@ -82,6 +82,6 @@ export class MainContentComponent implements OnInit{
 
   onCompleted(e:boolean){
     this.mgtodo.updateStatus(this.todoDetails.id, e);
-    this.isCompleted = e;
+    // this.isCompleted = e;
   }
 }

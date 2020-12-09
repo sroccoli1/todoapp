@@ -9,7 +9,7 @@
             fxFlex="1 1 15%"
             fxLayoutAlign="center center"
             formControlName="completed"
-            [checked]="isCompleted === true"
+            [checked]="todoDetails.completed"
             (change)="onCompleted($event.checked)">
         </mat-checkbox>
         <div fxLayout="column" fxFlex="1 1 85%"
