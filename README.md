@@ -42,9 +42,9 @@ Note: I don't know if can I do it, but I started! :-)<br><br>
 
 ## Current state
 
-**Sprint #2 outcome**<br><br>
-In this video we create 3 todos, update then delete them.<br><br> 
-[![Sprint 2 Outcome](https://media.giphy.com/media/k6W89xhU589HsABNrW/giphy.gif)](https://youtu.be/QGQlOSxWpV8)<br>
+**Sprint #3 outcome**<br><br>
+In this video we create 3 todos, update then delete them. Routing is set up and the CRUD service is local.<br><br>
+[![Sprint 3 Non-Final Outcome](https://media.giphy.com/media/z3Xvy4aQmhAIIF8QkG/source.gif)](https://youtu.be/CaAz6YqrHkk)<br>
 
 ## Sprint log
 
