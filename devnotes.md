@@ -55,5 +55,20 @@ This sprint will use more features I learned throughout the Angular course.
 - CRUD locally only.
 - Checkbox goes randomly checked when you click on a todo title on the left.  
 
+## Sprint #3 : 2020, Dec 8 - Dec 16
+
+### Coverage
+This sprint will set up routing so when you click a todo title on the left, it updates the URL.
+
+### Out of this sprint:
+- HTTP
+... But found good documentation about it.
+
+### Current and limitations :
+
+- See the video on Youtube (unlisted).
+- In this video we create 3 todos, update then delete them. Routing is set up and the CRUD service is local.<br><br>
+[![Sprint 3 Non-Final Outcome](https://media.giphy.com/media/z3Xvy4aQmhAIIF8QkG/giphy.mp4)](https://youtu.be/CaAz6YqrHkk)<br>
+
 ## Contents
 - [Todo App Project](https://github.com/sroccoli1/todoapp)
