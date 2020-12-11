@@ -53,3 +53,24 @@ In this video we create 3 todos, update then delete them. Routing is set up and 
 ## Errors and fixes log
 
 [My own record of errors and fixes.](https://github.com/sroccoli1/todoapp/blob/main/errors_and_fixes.md)
+
+## I want to check this out - How to ?
+
+1. Pull the <code>master</code> branch!
+
+2. Run "npm install" inside this project folder to install all dependencies.
+
+Make sure you use the latest version of the CLI (upgrade guide below)
+
+3. Run "ng serve" to see the app in action (try "npm start" in case "ng serve" fails).
+
+
+### How to upgrade the CLI
+
+Run the below commands - only use "sudo" on Mac/ Linux.
+
+<code>
+sudo npm uninstall -g angular-cli @angular/cli
+npm cache clean --force
+sudo npm install -g @angular/cli 
+</code>
