@@ -69,8 +69,7 @@ Make sure you use the latest version of the CLI (upgrade guide below)
 
 Run the below commands - only use "sudo" on Mac/ Linux.
 
-<code>
-sudo npm uninstall -g angular-cli @angular/cli <br>
-npm cache clean --force <br>
-sudo npm install -g @angular/cli 
-</code>
+<code>sudo npm uninstall -g angular-cli @angular/cli</code><br>
+<code>npm cache clean --force</code><br>
+<code>sudo npm install -g @angular/cli</code><br>
+
