@@ -8,7 +8,7 @@
         <mat-nav-list *ngFor="let todo of todolist">
             <mat-card>
                 <a  [ngClass]="{'underline':todo.completed === true}" 
-                    mat-list-item href="#" 
+                    mat-list-item 
                     [routerLink]="[todo.id]">{{todo.title}}
                 </a>
             </mat-card><br>
