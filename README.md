@@ -58,11 +58,11 @@ In this video we create 3 todos, update then delete them. Routing is set up and 
 
 1. Pull the <code>master</code> branch!
 
-2. Run "npm install" inside this project folder to install all dependencies.
+2. Run <code>npm install</code> inside this project folder to install all dependencies.
 
 Make sure you use the latest version of the CLI (upgrade guide below)
 
-3. Run "ng serve" to see the app in action (try "npm start" in case "ng serve" fails).
+3. Run <code>ng serve</code> to see the app in action (try <code>npm start</code> in case <code>ng serve</code> fails).
 
 
 ### How to upgrade the CLI
@@ -70,7 +70,7 @@ Make sure you use the latest version of the CLI (upgrade guide below)
 Run the below commands - only use "sudo" on Mac/ Linux.
 
 <code>
-sudo npm uninstall -g angular-cli @angular/cli
-npm cache clean --force
+sudo npm uninstall -g angular-cli @angular/cli <br>
+npm cache clean --force <br>
 sudo npm install -g @angular/cli 
 </code>
