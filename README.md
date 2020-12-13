@@ -59,7 +59,7 @@ In this video we create 3 todos, update then delete them. Routing is set up and 
 Important to note to the working code is on the <code>master</code> branch! 
 1. Start getting the remote reposity by cloning it in your local repository. <br>
 To clone just the <code>master</code> branch, this may help:<br>
-<code> git clone <url> --branch <branch> --single-branch [<folder>]</code>
+<code> git clone \<url\> --branch \<branch\> --single-branch [\<folder\>]</code>
 
 2. Run <code>npm install</code> inside this project folder to install all dependencies.
 
@@ -75,4 +75,3 @@ Run the below commands - only use "sudo" on Mac/ Linux.
 <code>sudo npm uninstall -g angular-cli @angular/cli</code><br>
 <code>npm cache clean --force</code><br>
 <code>sudo npm install -g @angular/cli</code><br>
-
