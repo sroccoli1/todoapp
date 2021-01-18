@@ -1,6 +1,6 @@
 # Todo App
 
-**Assignment for all developer candidates at Tecinspire**
+**Assignment for all developer candidates at T---------**
 
 Create a simple TODO Style Angular application using the Angular Material library and the FLEX layout. 
 The components you need can be found in the Angular Material library. 
@@ -32,11 +32,8 @@ alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css
 4. If TODO has been dode, underline the header  in the title sidenav listing.
 
 ## GUI (my proposition) 
-This is where I'm going to. See the video on Youtube (unlisted).<br><br>
-[![Concept]()]()<br>
 
-**Play with it!**<br>
-Here is the [interactive presentation (Google Slide)](https://docs.google.com/presentation/d/1_viCUeWmkG_seoqqHQUTjdlEZX5zTAcnJlipYdul-68/edit?usp=sharing)
+**[Play with it! (Google Slide)](https://docs.google.com/presentation/d/1_viCUeWmkG_seoqqHQUTjdlEZX5zTAcnJlipYdul-68/edit?usp=sharing)**<br>
 
 Note: I don't know if can I do it, but I started! :-)<br><br>
 
