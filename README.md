@@ -1,6 +1,6 @@
 # Todo App
 
-**Assignment for all developer candidates at T---------**
+**Assignment for all developer candidates at T**** **
 
 Create a simple TODO Style Angular application using the Angular Material library and the FLEX layout. 
 The components you need can be found in the Angular Material library. 
