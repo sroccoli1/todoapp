@@ -34,6 +34,7 @@ alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css
 
 ## GUI (my proposition) 
 
+![GUI Spec Social Picture](https://github.com/sroccoli1/todoapp/blob/main/GUISpec-Social.jpg?raw=true)<br>
 **[Play with it! (Google Slide)](https://docs.google.com/presentation/d/1_viCUeWmkG_seoqqHQUTjdlEZX5zTAcnJlipYdul-68/edit?usp=sharing)**<br>
 
 Note: I don't know if can I do it, but I started! :-)<br><br>
