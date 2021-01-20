@@ -1,13 +1,14 @@
 # Todo App
 
-**Assignment for all developer candidates at T**** **
+**A simple TODO Style Angular application using the Angular Material library and the FLEX layout.** 
 
-Create a simple TODO Style Angular application using the Angular Material library and the FLEX layout. 
+Originally it was a skills test for all developer candidates at T****
+<br><br>The skills test's resources and instructions can be found right below.
+
+## Resources:
 The components you need can be found in the Angular Material library. 
 The task is to use the angular / flex-layout (https://github.com/angular/flex-layout) library to lay out the tags, 
 alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css/ a-guide-to-flexbox/).
-
-## Resources:
 - [Angular](https://angular.io/start) 
 - [Material Design](https://material.angular.io/components/categories) 
 - [Flexbox](https://github.com/angular/flex-layout/wiki)
@@ -37,11 +38,18 @@ alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css
 
 Note: I don't know if can I do it, but I started! :-)<br><br>
 
-## Current state
+## Current state: Finished
 
-**Sprint #3 outcome**<br><br>
 In this video we create 3 todos, update then delete them. Routing is set up and the CRUD service is local.<br><br>
 [![Sprint 3 Non-Final Outcome](https://media.giphy.com/media/z3Xvy4aQmhAIIF8QkG/source.gif)](https://youtu.be/CaAz6YqrHkk)<br>
+
+**Limitations**<br><br>
+Todos are deleted when refreshing the browser, as this SPA (Single Page Application) does not communicated with server nor database.
+
+## Upgrade
+
+**In a new version Todos will be saved in a database**. 
+<br>I'm considering using these next technos: Google Firebase and Node JS.
 
 ## Sprint log
 
@@ -51,7 +59,7 @@ In this video we create 3 todos, update then delete them. Routing is set up and 
 
 [My own record of errors and fixes.](https://github.com/sroccoli1/todoapp/blob/main/errors_and_fixes.md)
 
-## I want to check this out - How to ?
+## I want to check out the code - How to ?
 
 Important to note to the working code is on the <code>master</code> branch! 
 1. Start getting the remote reposity by cloning it in your local repository. <br>
