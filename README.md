@@ -2,7 +2,7 @@
 
 **A simple TODO Style Angular application using the Angular Material library and the FLEX layout.** 
 
-Originally it was a skills test for all developer candidates at T****
+Originally it was a developer skills test.
 <br><br>The skills test's resources and instructions can be found right below.
 
 ## Resources:
@@ -37,20 +37,18 @@ alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css
 ![GUI Spec Social Picture](https://github.com/sroccoli1/todoapp/blob/main/GUISpec-Social.jpg?raw=true)<br>
 **[Play with it! (Google Slide)](https://docs.google.com/presentation/d/1_viCUeWmkG_seoqqHQUTjdlEZX5zTAcnJlipYdul-68/edit?usp=sharing)**<br>
 
-Note: I don't know if can I do it, but I started! :-)<br><br>
-
 ## Current state: Finished
 
 In this video we create 3 todos, update then delete them. Routing is set up and the CRUD service is local.<br><br>
 [![Sprint 3 Non-Final Outcome](https://media.giphy.com/media/z3Xvy4aQmhAIIF8QkG/source.gif)](https://youtu.be/CaAz6YqrHkk)<br>
 
 **Limitations**<br><br>
-Todos are deleted when refreshing the browser, as this SPA (Single Page Application) does not communicated with server nor database.
+Todos are deleted when refreshing the browser, as this SPA (Single Page Application) does not communicate with backend.
 
 ## Upgrade
 
 **In a new version Todos will be saved in a database**. 
-<br>I'm considering using these next technos: Google Firebase and Node JS.
+<br>I'm considering using next these backend technos: Google Firebase and Node JS.
 
 ## Sprint log
 
