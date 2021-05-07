@@ -37,18 +37,22 @@ alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css
 ![GUI Spec Social Picture](https://github.com/sroccoli1/todoapp/blob/main/GUISpec-Social.jpg?raw=true)<br>
 **[Play with it! (Google Slide)](https://docs.google.com/presentation/d/1_viCUeWmkG_seoqqHQUTjdlEZX5zTAcnJlipYdul-68/edit?usp=sharing)**<br>
 
-## Current state: Finished
+## Current state: Re-opened
 
 In this video we create 3 todos, update then delete them. Routing is set up and the CRUD service is local.<br><br>
 [![Sprint 3 Non-Final Outcome](https://media.giphy.com/media/z3Xvy4aQmhAIIF8QkG/source.gif)](https://youtu.be/CaAz6YqrHkk)<br>
 
 **Limitations**<br><br>
-Todos are deleted when refreshing the browser, as this SPA (Single Page Application) does not communicate with backend.
+- Todos are deleted when refreshing the browser, as this SPA (Single Page Application) does not communicate with backend.
+- Noticeable issue : when you manually enter a route with an todo's UUID, the todo is not displayed. 
 
-## Upgrade
+## Upgrade : sprint #4
 
 **In a new version Todos will be saved in a database**. 
-<br>I'm considering using next these backend technos: Google Firebase and Node JS.
+<br>This sprint will : 
+- set up a backend on Firebase and HTTP requests so that todos are saved.
+- fix the issue related to routes with UUID (see Sprint #3 / Current and limitations ).  
+
 
 ## Sprint log
 
