@@ -67,8 +67,17 @@ This sprint will set up routing so when you click a todo title on the left, it u
 ### Current and limitations :
 
 - See the video on Youtube (unlisted).
-- In this video we create 3 todos, update then delete them. Routing is set up and the CRUD service is local.<br><br>
+- In this video we create 3 todos, update then delete them. Routing is set up and the CRUD service is local.
+- Noticeable issue : when you manually enter a route with an todo's UUID, the todo is not displayed. <br><br>
 [![Sprint 3 Non-Final Outcome](https://media.giphy.com/media/z3Xvy4aQmhAIIF8QkG/source.gif)](https://youtu.be/CaAz6YqrHkk)<br>
+
+
+## Sprint #4 : 2021, May 10 - May 31
+
+### Coverage
+This sprint will : 
+- set up a backend on Firebase and HTTP requests so that todos are saved.
+- fix the issue related to routes with UUID (see Sprint #3 / Current and limitations ).  
 
 ## Contents
 - [Todo App Project](https://github.com/sroccoli1/todoapp)
