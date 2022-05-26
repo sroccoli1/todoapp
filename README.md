@@ -7,7 +7,7 @@ The app is unpublished, but you can watch a short video of the outcome in the br
 
 ### Content
 - [Project Status](https://github.com/sroccoli1/todoapp#project-status-closed)
-- [The skills test's instructions, my GUI spec](https://github.com/sroccoli1/todoapp#instructions)
+- [The skills test's resources, instructions and my GUI spec](https://github.com/sroccoli1/todoapp#resources)
 - [Sprint log](https://github.com/sroccoli1/todoapp#sprint-log)
 - [Errors and fixes](https://github.com/sroccoli1/todoapp#errors-and-fixes-log)
 - [How to get and use the code](https://github.com/sroccoli1/todoapp#i-want-to-use-the-code---how-to-)
