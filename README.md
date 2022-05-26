@@ -1,9 +1,34 @@
 # Todo App
 
-**A simple TODO Style Angular application using the Angular Material library and the FLEX layout.** 
+### Todo App is a simple TO-DO application project using the ANGULAR Material library and the FLEX layout.
+<br>
+And originally it was used as a developer skills test.<br><br>
+The app is unpublished, but you can watch a short video of the outcome in the browser, use the code, and read the sprint log.
 
-Originally it was a developer skills test.
-<br><br>The skills test's resources and instructions can be found right below.
+### Content
+- [Project Status](https://github.com/sroccoli1/todoapp#project-status-closed)
+- [The skills test's instructions, my GUI spec](https://github.com/sroccoli1/todoapp#instructions)
+- [Sprint log](https://github.com/sroccoli1/todoapp#sprint-log)
+- [Errors and fixes](https://github.com/sroccoli1/todoapp#errors-and-fixes-log)
+- [How to get and use the code](https://github.com/sroccoli1/todoapp#i-want-to-use-the-code---how-to-)
+
+## Project status: Closed
+
+In this video we create 3 todos, update then delete them. 
+<br><br>
+[![Sprint 3 Non-Final Outcome](https://media.giphy.com/media/z3Xvy4aQmhAIIF8QkG/source.gif)](https://youtu.be/CaAz6YqrHkk)<br>
+
+**Limitations**<br><br>
+- Todos are deleted when refreshing the browser, as this SPA (Single Page Application) does not communicate with backend (the CRUD service is local).
+- Routing is set up and
+- Noticeable issue : when you manually enter a route with an todo's UUID, the todo is not displayed. 
+
+## Upgrade : sprint #4
+
+**In a new version Todos will be saved in a database**. 
+<br>This sprint will : 
+- set up a backend on Firebase and HTTP requests so that todos are saved.
+- fix the issue related to routes with UUID (see Sprint #3 / Current and limitations ).  
 
 ## Resources:
 The components you need can be found in the Angular Material library. 
@@ -37,21 +62,7 @@ alternatively you can do this with CSS FLEX (https://css-tricks.com/snippets/css
 ![GUI Spec Social Picture](https://github.com/sroccoli1/todoapp/blob/main/GUISpec-Social.jpg?raw=true)<br>
 **[Play with it! (Google Slide)](https://docs.google.com/presentation/d/1_viCUeWmkG_seoqqHQUTjdlEZX5zTAcnJlipYdul-68/edit?usp=sharing)**<br>
 
-## Current state: Re-opened
 
-In this video we create 3 todos, update then delete them. Routing is set up and the CRUD service is local.<br><br>
-[![Sprint 3 Non-Final Outcome](https://media.giphy.com/media/z3Xvy4aQmhAIIF8QkG/source.gif)](https://youtu.be/CaAz6YqrHkk)<br>
-
-**Limitations**<br><br>
-- Todos are deleted when refreshing the browser, as this SPA (Single Page Application) does not communicate with backend.
-- Noticeable issue : when you manually enter a route with an todo's UUID, the todo is not displayed. 
-
-## Upgrade : sprint #4
-
-**In a new version Todos will be saved in a database**. 
-<br>This sprint will : 
-- set up a backend on Firebase and HTTP requests so that todos are saved.
-- fix the issue related to routes with UUID (see Sprint #3 / Current and limitations ).  
 
 
 ## Sprint log
@@ -62,7 +73,9 @@ In this video we create 3 todos, update then delete them. Routing is set up and 
 
 [My own record of errors and fixes.](https://github.com/sroccoli1/todoapp/blob/main/errors_and_fixes.md)
 
-## I want to check out the code - How to ?
+## I want to use the code - How to ?
+
+This assumes that you are familiar with the use of Git and Angular CLI. <br>
 
 Important to note to the working code is on the <code>master</code> branch! 
 1. Start getting the remote reposity by cloning it in your local repository. <br>
