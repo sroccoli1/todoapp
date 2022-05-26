@@ -2,7 +2,7 @@
 
 ### Todo App is a simple TO-DO application project using the ANGULAR Material library and the FLEX layout.
 <br>
-And originally it was used as a developer skills test.<br><br>
+And originally it was an answer of a skills test.<br><br>
 The app is unpublished, but you can watch a short video of the outcome in the browser, use the code, and read the sprint log.
 
 ### Content
