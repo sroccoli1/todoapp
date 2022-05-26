@@ -20,7 +20,7 @@ In this video we create 3 todos, update then delete them.
 
 **Limitations**<br><br>
 - Todos are deleted when refreshing the browser, as this SPA (Single Page Application) does not communicate with backend (the CRUD service is local).
-- Routing is set up and
+- Routing is set up.
 - Noticeable issue : when you manually enter a route with an todo's UUID, the todo is not displayed. 
 
 ## Upgrade : sprint #4
